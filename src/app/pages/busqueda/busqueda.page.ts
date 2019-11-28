@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @Component({
   selector: 'app-busqueda',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusquedaPage implements OnInit {
 
-  constructor() { }
+  constructor(private geolocation: Geolocation) { }
 
   ngOnInit() {
+  }
+
+  Locacion() {
+    this.geolocation.getCurrentPosition().then((resp) => {
+      // resp.coords.latitude
+      // resp.coords.longitude
+      console.log(resp.coords.latitude);
+      console.log(resp.coords.longitude);
+    }).catch((error) => {
+      console.log('Error getting location', error);
+    });
   }
 
 }
