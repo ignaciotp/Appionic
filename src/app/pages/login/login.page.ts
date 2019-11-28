@@ -73,7 +73,8 @@ export class LoginPage implements OnInit {
 
     if (valido) {
       //Navegar al tabs
-      this.navCtrl.navigateRoot('/main/tabs/tab1', { animated: true });
+      //this.navCtrl.navigateRoot('/main/tabs/tab1', { animated: true });
+      this.navCtrl.navigateRoot('/main/tabs/busqueda', { animated: true });
 
     } else {
       //alerta usuario y contraseña no correctos
