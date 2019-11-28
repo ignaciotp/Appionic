@@ -38,6 +38,11 @@ const routes: Routes = [
         ]
       },
       {
+        path:'busqueda',
+        loadChildren: () =>
+          import('../busqueda/busqueda.module').then(m => m.BusquedaPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
