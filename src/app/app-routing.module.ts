@@ -21,6 +21,11 @@ const routes: Routes = [
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
   }
+  // {
+  //   path: 'mapa',
+  //   loadChildren: () => import('./pages/mapa/mapa.module').then( m => m.MapaPageModule)
+  // }
+
 ];
 @NgModule({
   imports: [
