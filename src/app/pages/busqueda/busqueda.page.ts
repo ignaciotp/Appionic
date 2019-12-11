@@ -15,7 +15,8 @@ export class BusquedaPage implements OnInit {
 
   constructor(private geolocation: Geolocation, private http: HttpClient) { }
   ngOnInit() {
-    this.results = this.http.get('http://127.0.0.1/movilapp/get_mecanicos.php').pipe(
+    // this.results = this.http.get('http://127.0.0.1/movilapp/get_mecanicos.php').pipe(
+    this.results = this.http.get('http://appyudame.cl/consultas/get_mecanicos.php').pipe(
       map(results => {
         console.log(results);
         return results;
