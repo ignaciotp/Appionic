@@ -43,6 +43,11 @@ const routes: Routes = [
           import('../busqueda/busqueda.module').then(m => m.BusquedaPageModule)
       },
       {
+        path:'solicitudes',
+        loadChildren: () =>
+          import('../solicitudes/solicitudes.module').then(m => m.SolicitudesPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

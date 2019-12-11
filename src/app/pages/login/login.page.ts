@@ -63,6 +63,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.slides.lockSwipes(true);
+    //this.uService.Alertainformativa("Tiene Una Peticion!, Haga click para verla!");
   }
 
   async login(fLogin: NgForm) {

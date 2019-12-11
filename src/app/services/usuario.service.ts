@@ -19,7 +19,7 @@ export class UsuarioService {
 
     return new Promise(resolve => {
 
-      this.http.post('http://appyudame.cl/consultas/test.php', data)
+      this.http.post('http://127.0.0.1/movilapp/test.php', data)
         .subscribe(resp => {
           console.log(resp);
 
@@ -42,6 +42,20 @@ export class UsuarioService {
 
     });
 
+  }
+
+  getMecanico(){
+    
+    return new Promise(resolve => {
+
+      this.http.post('http://127.0.0.1/movilapp/get_mecanicos.php',true)
+      .subscribe(resp => {
+        console.log(resp);
+        
+
+      });
+
+    });
   }
 
   async guardarToken(token: string) {
